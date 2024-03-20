@@ -1,0 +1,43 @@
+cabal-version:       2.2
+
+name:                notion-doc
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/alessandrojean/notion-doc
+license:             MIT
+license-file:        LICENSE
+author:              Alessandro Jean
+maintainer:          example@example.com
+copyright:           2024 Alessandro Jean
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+                     CHANGELOG.md
+
+executable notion-doc
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       NotionApi, NotionApiTypes, Utils, Converter, Formats
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5,
+                       aeson,
+                       aeson-casing,
+                       http-conduit,
+                       http-client,
+                       http-client-tls,
+                       http-types,
+                       conduit,
+                       conduit-extra,
+                       bytestring,
+                       pandoc,
+                       pandoc-types,
+                       text,
+                       slugify
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-home-modules
+                       -Wredundant-constraints
